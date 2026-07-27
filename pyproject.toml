@@ -99,6 +99,9 @@ mcp = [
 nemo-relay = [
     "nemo-relay>=0.4.0",
 ]
+repro = [
+    "vllm>=0.10.2,<0.12",
+]
 
 # CLI ships as a separate package: `uv add nooa-cli`.
 # Data-science stack for the LLM REPL: `uv add nooa-cli[datascience]`.

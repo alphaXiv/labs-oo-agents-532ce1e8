@@ -1,0 +1,40 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: nooa-interface-{{ORX_RUN}}
+spec:
+  backoffLimit: 0
+  activeDeadlineSeconds: 28800
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: reproduction
+          image: ghcr.io/astral-sh/uv:0.8.15-python3.12-bookworm-slim
+          command: ["bash", "-c", "$ORX_SCRIPT"]
+          env:
+            - name: HF_HOME
+              value: /model-cache
+            - name: VLLM_WORKER_MULTIPROC_METHOD
+              value: spawn
+            - name: TOKENIZERS_PARALLELISM
+              value: "false"
+          resources:
+            requests:
+              nvidia.com/gpu: "4"
+              cpu: "24"
+              memory: 128Gi
+            limits:
+              nvidia.com/gpu: "4"
+              cpu: "48"
+              memory: 256Gi
+          volumeMounts:
+            - name: model-cache
+              mountPath: /model-cache
+            - name: uv-cache
+              mountPath: /root/.cache/uv
+      volumes:
+        - name: model-cache
+          emptyDir: {}
+        - name: uv-cache
+          emptyDir: {}
