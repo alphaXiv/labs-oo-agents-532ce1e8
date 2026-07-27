@@ -1,44 +1,25 @@
-# Reproduction: typed live objects versus JSON tools
+## Reproduction: typed live objects versus JSON tools
 
-[![Paper](https://img.shields.io/badge/arXiv-2607.20709-b31b1b.svg)](https://arxiv.org/abs/2607.20709)
-[![Verdict](https://img.shields.io/badge/verdict-partially%20reproduced-f0ad4e.svg)](reports/interface-reproduction/report.md)
+[![Open report](https://img.shields.io/badge/report-illustrated-4f46e5)](reports/interface-reproduction/report.md)
 [![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/alphaXiv/labs-oo-agents-532ce1e8/blob/main/notebooks/nooa_interface_reproduction.py)
 
-We tested the paper’s claim that typed live Python objects and code actions make
-stateful, contract-sensitive agent work more reliable than a serialized tool
-interface. One locally served `Qwen/Qwen3-30B-A3B-Instruct-2507` model ran five
-executable capability families with matched intent, task data, sampling, and
-turn limits.
+**Assessment: partially reproduced.** We tested whether NOOA’s typed live Python objects improve executable agent success over a minimal serialized JSON-tool loop, with one local Qwen model, identical intent and task data, temperature 0.2, top-p 0.9, and a six-turn limit. Typed live NOOA reached **25/60 (41.7%)**, below JSON tools at **48/60 (80.0%)**. The targeted mechanisms did align: removing runtime validation produced **0/30** strict successes, and serialized copies produced **0/18** required state/alias effects versus **23/24** with live references.
 
-**Assessment: partially reproduced.** Runtime return validation was decisive
-(validated live NOOA **25/60**, unvalidated **0/30**) and live references helped
-the targeted state-mutation test (**3/9** live versus **0/9** copied). The
-broader interface advantage did not appear: the minimal JSON-tool control
-reached **48/60 (80.0%)**, versus **25/60 (41.7%)** for live NOOA. The paper
-reports **97.9%** over 4,400 focused capability instances and **84.7%** on its
-stress aggregate; those numbers are context, not directly comparable, because
-this reproduction uses one public model and a smaller causal suite rather than
-the paper’s multi-model campaigns or SWE-bench, Terminal-Bench, and ARC.
+The paper reports **4,309/4,400 (97.9%)** validation successes across its ten-model suite and **254/300 (84.7%)** on its stress subset. Our numbers are not direct benchmark replicas: this bounded causal reproduction uses one public model and five executable capability tasks, and omits the paper’s full SWE-bench, Terminal-Bench, ARC-AGI-3, and multi-model campaigns.
 
-All formal evidence ran on OpenResearch **Kubernetes** using four **NVIDIA RTX
-PRO 6000 Blackwell** GPUs per job and **16 GPUs peak concurrently**. The queue
-runner measured **0.988727 hours of Kubernetes campaign wall time** across 11
-successful runs with terminal logs. Read the [tutorial-style report](reports/interface-reproduction/report.md),
-explore the [self-contained marimo notebook](notebooks/nooa_interface_reproduction.py),
-or inspect the [frozen terminal-summary data](reports/interface-reproduction/results.json).
+Read the [tutorial-style report](reports/interface-reproduction/report.md), inspect the [self-contained marimo notebook](notebooks/nooa_interface_reproduction.py), or download the [compact trajectory records](reports/interface-reproduction/data/results.json). The exact public Molab URL is [molab.marimo.io/github/alphaXiv/labs-oo-agents-532ce1e8/blob/main/notebooks/nooa_interface_reproduction.py](https://molab.marimo.io/github/alphaXiv/labs-oo-agents-532ce1e8/blob/main/notebooks/nooa_interface_reproduction.py).
 
-## Experiment log
+Compute used the OpenResearch **Kubernetes** backend on **NVIDIA RTX PRO 6000 Blackwell** GPUs, with a peak of **16 GPUs concurrently** and **1.15 hours actual elapsed wall time** from fresh recovery orientation to the last scientific completion.
 
-Every scientific branch used the same exact command:
-`uv sync --frozen --extra repro && uv run --extra repro python experiments/interface_reproduction/run.py`.
+### Experiment log
 
 | Branch / experiment | Purpose or change | Exact run command | Assessment / outcome | Compute |
 |---|---|---|---|---|
-| `main` | Public README, report, figures, notebook, and metadata | Not run as an experiment (publication surface) | Presentation only | — |
-| [JSON control](https://github.com/alphaXiv/labs-oo-agents-532ce1e8/tree/orx/kubernetes-toolchain-json-control) / [replication](https://github.com/alphaXiv/labs-oo-agents-532ce1e8/tree/orx/json-control-independent-seeds) | Minimal serialized JSON-schema tool loop | `uv sync --frozen --extra repro && uv run --extra repro python experiments/interface_reproduction/run.py` | 24/30 primary; 48/60 with replication | Kubernetes, 4× RTX PRO 6000 Blackwell |
-| [Live NOOA](https://github.com/alphaXiv/labs-oo-agents-532ce1e8/tree/orx/toolchain-round-nooa-live) / [batch B](https://github.com/alphaXiv/labs-oo-agents-532ce1e8/tree/orx/nooa-live-independent-seeds) / [batch C](https://github.com/alphaXiv/labs-oo-agents-532ce1e8/tree/orx/nooa-live-independent-seeds-b) | Released CodeAct, typed returns, live workspace | `uv sync --frozen --extra repro && uv run --extra repro python experiments/interface_reproduction/run.py` | 12/30 primary; 25/60 over three batches | Kubernetes, 4× RTX PRO 6000 Blackwell |
-| [Serialized-copy ablation](https://github.com/alphaXiv/labs-oo-agents-532ce1e8/tree/orx/toolchain-round-nooa-serialized) / [replication](https://github.com/alphaXiv/labs-oo-agents-532ce1e8/tree/orx/serialized-copy-independent-seeds) | Replace live workspace references with snapshots and copy-returning helpers | `uv sync --frozen --extra repro && uv run --extra repro python experiments/interface_reproduction/run.py` | 12/30 primary; 19/45 with replication; state 0/9 | Kubernetes, 4× RTX PRO 6000 Blackwell |
-| [Validation ablation](https://github.com/alphaXiv/labs-oo-agents-532ce1e8/tree/orx/validation-ablation-shard-a) / [replication](https://github.com/alphaXiv/labs-oo-agents-532ce1e8/tree/orx/validation-ablation-independent-seeds) | Change the generated return annotation to `Any` | `uv sync --frozen --extra repro && uv run --extra repro python experiments/interface_reproduction/run.py` | 0/30 across two complete batches | Kubernetes, 4× RTX PRO 6000 Blackwell |
+| `main` | Public report, notebook, compact records, and figures | Not run as an experiment (publication surface) | Presentation only | None |
+| [JSON control](https://github.com/alphaXiv/labs-oo-agents-532ce1e8/tree/orx/kubernetes-toolchain-json-control) + [independent seeds](https://github.com/alphaXiv/labs-oo-agents-532ce1e8/tree/orx/json-control-independent-seeds) | Minimal schema-tool loop; second disjoint six-seed block | `uv sync --frozen --extra repro && uv run --extra repro python experiments/interface_reproduction/run.py` | 48/60 (80.0%); both blocks were 24/30 | 2 runs × 4 GPUs, Kubernetes |
+| [Typed live NOOA](https://github.com/alphaXiv/labs-oo-agents-532ce1e8/tree/orx/toolchain-round-nooa-live) + [seeds A](https://github.com/alphaXiv/labs-oo-agents-532ce1e8/tree/orx/nooa-live-independent-seeds) + [seeds B](https://github.com/alphaXiv/labs-oo-agents-532ce1e8/tree/orx/nooa-live-independent-seeds-b) | Live state, typed return contract, code action | `uv sync --frozen --extra repro && uv run --extra repro python experiments/interface_reproduction/run.py` | 25/60 (41.7%); headline advantage not observed | 3 runs × 4 GPUs, Kubernetes |
+| [No-validation shard](https://github.com/alphaXiv/labs-oo-agents-532ce1e8/tree/orx/validation-ablation-shard-a) + [independent seeds](https://github.com/alphaXiv/labs-oo-agents-532ce1e8/tree/orx/validation-ablation-independent-seeds) | Change generated method return annotation from typed result to `Any` | `uv sync --frozen --extra repro && uv run --extra repro python experiments/interface_reproduction/run.py` | 0/30; validation mechanism aligned | 2 runs × 4 GPUs, Kubernetes |
+| [Serialized-copy ablation](https://github.com/alphaXiv/labs-oo-agents-532ce1e8/tree/orx/toolchain-round-nooa-serialized) + [independent seeds](https://github.com/alphaXiv/labs-oo-agents-532ce1e8/tree/orx/serialized-copy-independent-seeds) | Replace live references with JSON snapshots and copy-returning methods | `uv sync --frozen --extra repro && uv run --extra repro python experiments/interface_reproduction/run.py` | 19/45 strict; 0/18 targeted live effects | 2 runs × 4 GPUs, Kubernetes |
 
 ---
 

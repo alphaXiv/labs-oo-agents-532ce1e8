@@ -1,0 +1,6019 @@
+{
+  "aggregate": {
+    "json": {
+      "failures": {
+        "contract_invalid": 12
+      },
+      "families": {
+        "error_recovery": {
+          "mechanism_successes": null,
+          "n": 12,
+          "successes": 12
+        },
+        "multi_step_tools": {
+          "mechanism_successes": null,
+          "n": 12,
+          "successes": 12
+        },
+        "reference_identity": {
+          "mechanism_successes": 12,
+          "n": 12,
+          "successes": 12
+        },
+        "state_mutation": {
+          "mechanism_successes": 12,
+          "n": 12,
+          "successes": 12
+        },
+        "typed_nested_output": {
+          "mechanism_successes": null,
+          "n": 12,
+          "successes": 0
+        }
+      },
+      "mean_calls": 4.0,
+      "mean_latency_s": 7.4215333333333335,
+      "mean_tokens": 4474.916666666667,
+      "n": 60,
+      "successes": 48
+    },
+    "nooa": {
+      "failures": {
+        "harness_exception": 5,
+        "identity_or_alias_effect_lost": 1,
+        "wrong_answer": 7,
+        "wrong_checksum": 22
+      },
+      "families": {
+        "error_recovery": {
+          "mechanism_successes": null,
+          "n": 12,
+          "successes": 7
+        },
+        "multi_step_tools": {
+          "mechanism_successes": null,
+          "n": 12,
+          "successes": 0
+        },
+        "reference_identity": {
+          "mechanism_successes": 11,
+          "n": 12,
+          "successes": 1
+        },
+        "state_mutation": {
+          "mechanism_successes": 12,
+          "n": 12,
+          "successes": 5
+        },
+        "typed_nested_output": {
+          "mechanism_successes": null,
+          "n": 12,
+          "successes": 12
+        }
+      },
+      "mean_calls": 2.3833333333333333,
+      "mean_latency_s": 37.013783333333336,
+      "mean_tokens": 8720.383333333333,
+      "n": 60,
+      "successes": 25
+    },
+    "nooa_no_validation": {
+      "failures": {
+        "contract_invalid": 29,
+        "harness_exception": 1
+      },
+      "families": {
+        "error_recovery": {
+          "mechanism_successes": null,
+          "n": 6,
+          "successes": 0
+        },
+        "multi_step_tools": {
+          "mechanism_successes": null,
+          "n": 6,
+          "successes": 0
+        },
+        "reference_identity": {
+          "mechanism_successes": 5,
+          "n": 6,
+          "successes": 0
+        },
+        "state_mutation": {
+          "mechanism_successes": 6,
+          "n": 6,
+          "successes": 0
+        },
+        "typed_nested_output": {
+          "mechanism_successes": null,
+          "n": 6,
+          "successes": 0
+        }
+      },
+      "mean_calls": 2.0,
+      "mean_latency_s": 31.090500000000002,
+      "mean_tokens": 6533.6,
+      "n": 30,
+      "successes": 0
+    },
+    "nooa_serialized": {
+      "failures": {
+        "harness_exception": 6,
+        "state_not_mutated": 9,
+        "wrong_answer": 3,
+        "wrong_checksum": 8
+      },
+      "families": {
+        "error_recovery": {
+          "mechanism_successes": null,
+          "n": 9,
+          "successes": 9
+        },
+        "multi_step_tools": {
+          "mechanism_successes": null,
+          "n": 9,
+          "successes": 1
+        },
+        "reference_identity": {
+          "mechanism_successes": 0,
+          "n": 9,
+          "successes": 0
+        },
+        "state_mutation": {
+          "mechanism_successes": 0,
+          "n": 9,
+          "successes": 0
+        },
+        "typed_nested_output": {
+          "mechanism_successes": null,
+          "n": 9,
+          "successes": 9
+        }
+      },
+      "mean_calls": 2.466666666666667,
+      "mean_latency_s": 47.16102222222222,
+      "mean_tokens": 10046.8,
+      "n": 45,
+      "successes": 19
+    }
+  },
+  "backend": "kubernetes",
+  "campaign_end": "2026-07-27T02:04:28Z",
+  "campaign_start": "2026-07-27T00:55:19Z",
+  "campaign_wall_hours": 1.1525,
+  "conditions": {
+    "json": {
+      "branches": [
+        "orx/kubernetes-toolchain-json-control",
+        "orx/json-control-independent-seeds"
+      ],
+      "label": "JSON tools",
+      "records": [
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "state_mutation",
+          "harness": "json",
+          "input_tokens": 3325,
+          "latency_s": 64.277,
+          "model_calls": 3,
+          "output_tokens": 158,
+          "seed": 1103,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 3483,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 12,
+            "journal": [
+              "alpha",
+              "beta"
+            ],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "reference_identity",
+          "harness": "json",
+          "input_tokens": 3065,
+          "latency_s": 4.826,
+          "model_calls": 3,
+          "output_tokens": 154,
+          "seed": 1103,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 3219,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "shared-green",
+              "touches": 1
+            },
+            "alias_b": {
+              "label": "shared-green",
+              "touches": 1
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "contract_invalid",
+          "family": "typed_nested_output",
+          "harness": "json",
+          "input_tokens": 6900,
+          "latency_s": 3.978,
+          "model_calls": 6,
+          "output_tokens": 135,
+          "seed": 1103,
+          "success": false,
+          "tool_errors": 1,
+          "total_tokens": 7035,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "relabel-a",
+              "touches": 1
+            },
+            "alias_b": {
+              "label": "relabel-a",
+              "touches": 1
+            },
+            "aliases_share_identity": true,
+            "counter": 1,
+            "journal": [
+              "first"
+            ],
+            "unstable_attempts": 2
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "error_recovery",
+          "harness": "json",
+          "input_tokens": 4122,
+          "latency_s": 4.565,
+          "model_calls": 4,
+          "output_tokens": 157,
+          "seed": 1103,
+          "success": true,
+          "tool_errors": 1,
+          "total_tokens": 4279,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 2
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "multi_step_tools",
+          "harness": "json",
+          "input_tokens": 4083,
+          "latency_s": 6.129,
+          "model_calls": 4,
+          "output_tokens": 212,
+          "seed": 1103,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 4295,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "state_mutation",
+          "harness": "json",
+          "input_tokens": 3325,
+          "latency_s": 4.833,
+          "model_calls": 3,
+          "output_tokens": 166,
+          "seed": 2207,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 3491,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 12,
+            "journal": [
+              "alpha",
+              "beta"
+            ],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "reference_identity",
+          "harness": "json",
+          "input_tokens": 3065,
+          "latency_s": 4.432,
+          "model_calls": 3,
+          "output_tokens": 150,
+          "seed": 2207,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 3215,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "shared-green",
+              "touches": 1
+            },
+            "alias_b": {
+              "label": "shared-green",
+              "touches": 1
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "contract_invalid",
+          "family": "typed_nested_output",
+          "harness": "json",
+          "input_tokens": 6900,
+          "latency_s": 4.288,
+          "model_calls": 6,
+          "output_tokens": 135,
+          "seed": 2207,
+          "success": false,
+          "tool_errors": 1,
+          "total_tokens": 7035,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "relabel-a",
+              "touches": 1
+            },
+            "alias_b": {
+              "label": "relabel-a",
+              "touches": 1
+            },
+            "aliases_share_identity": true,
+            "counter": 1,
+            "journal": [
+              "first"
+            ],
+            "unstable_attempts": 2
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "error_recovery",
+          "harness": "json",
+          "input_tokens": 4122,
+          "latency_s": 4.663,
+          "model_calls": 4,
+          "output_tokens": 149,
+          "seed": 2207,
+          "success": true,
+          "tool_errors": 1,
+          "total_tokens": 4271,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 2
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "multi_step_tools",
+          "harness": "json",
+          "input_tokens": 4083,
+          "latency_s": 7.782,
+          "model_calls": 4,
+          "output_tokens": 251,
+          "seed": 2207,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 4334,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "state_mutation",
+          "harness": "json",
+          "input_tokens": 3325,
+          "latency_s": 4.955,
+          "model_calls": 3,
+          "output_tokens": 158,
+          "seed": 3301,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 3483,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 12,
+            "journal": [
+              "alpha",
+              "beta"
+            ],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "reference_identity",
+          "harness": "json",
+          "input_tokens": 3065,
+          "latency_s": 5.338,
+          "model_calls": 3,
+          "output_tokens": 172,
+          "seed": 3301,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 3237,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "shared-green",
+              "touches": 1
+            },
+            "alias_b": {
+              "label": "shared-green",
+              "touches": 1
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "contract_invalid",
+          "family": "typed_nested_output",
+          "harness": "json",
+          "input_tokens": 6900,
+          "latency_s": 4.26,
+          "model_calls": 6,
+          "output_tokens": 135,
+          "seed": 3301,
+          "success": false,
+          "tool_errors": 1,
+          "total_tokens": 7035,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "relabel-a",
+              "touches": 1
+            },
+            "alias_b": {
+              "label": "relabel-a",
+              "touches": 1
+            },
+            "aliases_share_identity": true,
+            "counter": 1,
+            "journal": [
+              "first"
+            ],
+            "unstable_attempts": 2
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "error_recovery",
+          "harness": "json",
+          "input_tokens": 4122,
+          "latency_s": 6.273,
+          "model_calls": 4,
+          "output_tokens": 201,
+          "seed": 3301,
+          "success": true,
+          "tool_errors": 1,
+          "total_tokens": 4323,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 2
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "multi_step_tools",
+          "harness": "json",
+          "input_tokens": 4083,
+          "latency_s": 7.724,
+          "model_calls": 4,
+          "output_tokens": 251,
+          "seed": 3301,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 4334,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "state_mutation",
+          "harness": "json",
+          "input_tokens": 3325,
+          "latency_s": 5.13,
+          "model_calls": 3,
+          "output_tokens": 166,
+          "seed": 4409,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 3491,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 12,
+            "journal": [
+              "alpha",
+              "beta"
+            ],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "reference_identity",
+          "harness": "json",
+          "input_tokens": 3065,
+          "latency_s": 4.674,
+          "model_calls": 3,
+          "output_tokens": 151,
+          "seed": 4409,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 3216,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "shared-green",
+              "touches": 1
+            },
+            "alias_b": {
+              "label": "shared-green",
+              "touches": 1
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "contract_invalid",
+          "family": "typed_nested_output",
+          "harness": "json",
+          "input_tokens": 6900,
+          "latency_s": 4.25,
+          "model_calls": 6,
+          "output_tokens": 135,
+          "seed": 4409,
+          "success": false,
+          "tool_errors": 1,
+          "total_tokens": 7035,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "relabel-a",
+              "touches": 1
+            },
+            "alias_b": {
+              "label": "relabel-a",
+              "touches": 1
+            },
+            "aliases_share_identity": true,
+            "counter": 1,
+            "journal": [
+              "first"
+            ],
+            "unstable_attempts": 2
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "error_recovery",
+          "harness": "json",
+          "input_tokens": 4122,
+          "latency_s": 6.232,
+          "model_calls": 4,
+          "output_tokens": 201,
+          "seed": 4409,
+          "success": true,
+          "tool_errors": 1,
+          "total_tokens": 4323,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 2
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "multi_step_tools",
+          "harness": "json",
+          "input_tokens": 4083,
+          "latency_s": 7.9,
+          "model_calls": 4,
+          "output_tokens": 251,
+          "seed": 4409,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 4334,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "state_mutation",
+          "harness": "json",
+          "input_tokens": 3325,
+          "latency_s": 5.117,
+          "model_calls": 3,
+          "output_tokens": 166,
+          "seed": 5519,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 3491,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 12,
+            "journal": [
+              "alpha",
+              "beta"
+            ],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "reference_identity",
+          "harness": "json",
+          "input_tokens": 3065,
+          "latency_s": 4.714,
+          "model_calls": 3,
+          "output_tokens": 152,
+          "seed": 5519,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 3217,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "shared-green",
+              "touches": 1
+            },
+            "alias_b": {
+              "label": "shared-green",
+              "touches": 1
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "contract_invalid",
+          "family": "typed_nested_output",
+          "harness": "json",
+          "input_tokens": 6900,
+          "latency_s": 4.234,
+          "model_calls": 6,
+          "output_tokens": 135,
+          "seed": 5519,
+          "success": false,
+          "tool_errors": 1,
+          "total_tokens": 7035,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "relabel-a",
+              "touches": 1
+            },
+            "alias_b": {
+              "label": "relabel-a",
+              "touches": 1
+            },
+            "aliases_share_identity": true,
+            "counter": 1,
+            "journal": [
+              "first"
+            ],
+            "unstable_attempts": 2
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "error_recovery",
+          "harness": "json",
+          "input_tokens": 4122,
+          "latency_s": 6.309,
+          "model_calls": 4,
+          "output_tokens": 202,
+          "seed": 5519,
+          "success": true,
+          "tool_errors": 1,
+          "total_tokens": 4324,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 2
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "multi_step_tools",
+          "harness": "json",
+          "input_tokens": 4083,
+          "latency_s": 7.747,
+          "model_calls": 4,
+          "output_tokens": 251,
+          "seed": 5519,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 4334,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "state_mutation",
+          "harness": "json",
+          "input_tokens": 3325,
+          "latency_s": 5.151,
+          "model_calls": 3,
+          "output_tokens": 165,
+          "seed": 6619,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 3490,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 12,
+            "journal": [
+              "alpha",
+              "beta"
+            ],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "reference_identity",
+          "harness": "json",
+          "input_tokens": 3065,
+          "latency_s": 4.657,
+          "model_calls": 3,
+          "output_tokens": 151,
+          "seed": 6619,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 3216,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "shared-green",
+              "touches": 1
+            },
+            "alias_b": {
+              "label": "shared-green",
+              "touches": 1
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "contract_invalid",
+          "family": "typed_nested_output",
+          "harness": "json",
+          "input_tokens": 6900,
+          "latency_s": 4.055,
+          "model_calls": 6,
+          "output_tokens": 135,
+          "seed": 6619,
+          "success": false,
+          "tool_errors": 1,
+          "total_tokens": 7035,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "relabel-a",
+              "touches": 1
+            },
+            "alias_b": {
+              "label": "relabel-a",
+              "touches": 1
+            },
+            "aliases_share_identity": true,
+            "counter": 1,
+            "journal": [
+              "first"
+            ],
+            "unstable_attempts": 2
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "error_recovery",
+          "harness": "json",
+          "input_tokens": 4122,
+          "latency_s": 5.895,
+          "model_calls": 4,
+          "output_tokens": 193,
+          "seed": 6619,
+          "success": true,
+          "tool_errors": 1,
+          "total_tokens": 4315,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 2
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "multi_step_tools",
+          "harness": "json",
+          "input_tokens": 4083,
+          "latency_s": 7.755,
+          "model_calls": 4,
+          "output_tokens": 251,
+          "seed": 6619,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 4334,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "state_mutation",
+          "harness": "json",
+          "input_tokens": 3325,
+          "latency_s": 64.256,
+          "model_calls": 3,
+          "output_tokens": 166,
+          "seed": 7723,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 3491,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 12,
+            "journal": [
+              "alpha",
+              "beta"
+            ],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "reference_identity",
+          "harness": "json",
+          "input_tokens": 3065,
+          "latency_s": 4.799,
+          "model_calls": 3,
+          "output_tokens": 154,
+          "seed": 7723,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 3219,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "shared-green",
+              "touches": 1
+            },
+            "alias_b": {
+              "label": "shared-green",
+              "touches": 1
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "contract_invalid",
+          "family": "typed_nested_output",
+          "harness": "json",
+          "input_tokens": 6900,
+          "latency_s": 4.245,
+          "model_calls": 6,
+          "output_tokens": 135,
+          "seed": 7723,
+          "success": false,
+          "tool_errors": 1,
+          "total_tokens": 7035,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "relabel-a",
+              "touches": 1
+            },
+            "alias_b": {
+              "label": "relabel-a",
+              "touches": 1
+            },
+            "aliases_share_identity": true,
+            "counter": 1,
+            "journal": [
+              "first"
+            ],
+            "unstable_attempts": 2
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "error_recovery",
+          "harness": "json",
+          "input_tokens": 4122,
+          "latency_s": 5.878,
+          "model_calls": 4,
+          "output_tokens": 188,
+          "seed": 7723,
+          "success": true,
+          "tool_errors": 1,
+          "total_tokens": 4310,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 2
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "multi_step_tools",
+          "harness": "json",
+          "input_tokens": 4083,
+          "latency_s": 7.72,
+          "model_calls": 4,
+          "output_tokens": 250,
+          "seed": 7723,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 4333,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "state_mutation",
+          "harness": "json",
+          "input_tokens": 3325,
+          "latency_s": 5.085,
+          "model_calls": 3,
+          "output_tokens": 166,
+          "seed": 8831,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 3491,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 12,
+            "journal": [
+              "alpha",
+              "beta"
+            ],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "reference_identity",
+          "harness": "json",
+          "input_tokens": 3065,
+          "latency_s": 4.639,
+          "model_calls": 3,
+          "output_tokens": 150,
+          "seed": 8831,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 3215,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "shared-green",
+              "touches": 1
+            },
+            "alias_b": {
+              "label": "shared-green",
+              "touches": 1
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "contract_invalid",
+          "family": "typed_nested_output",
+          "harness": "json",
+          "input_tokens": 6900,
+          "latency_s": 4.246,
+          "model_calls": 6,
+          "output_tokens": 135,
+          "seed": 8831,
+          "success": false,
+          "tool_errors": 1,
+          "total_tokens": 7035,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "relabel-a",
+              "touches": 1
+            },
+            "alias_b": {
+              "label": "relabel-a",
+              "touches": 1
+            },
+            "aliases_share_identity": true,
+            "counter": 1,
+            "journal": [
+              "first"
+            ],
+            "unstable_attempts": 2
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "error_recovery",
+          "harness": "json",
+          "input_tokens": 4122,
+          "latency_s": 5.52,
+          "model_calls": 4,
+          "output_tokens": 177,
+          "seed": 8831,
+          "success": true,
+          "tool_errors": 1,
+          "total_tokens": 4299,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 2
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "multi_step_tools",
+          "harness": "json",
+          "input_tokens": 4083,
+          "latency_s": 7.813,
+          "model_calls": 4,
+          "output_tokens": 251,
+          "seed": 8831,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 4334,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "state_mutation",
+          "harness": "json",
+          "input_tokens": 3325,
+          "latency_s": 5.122,
+          "model_calls": 3,
+          "output_tokens": 166,
+          "seed": 9941,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 3491,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 12,
+            "journal": [
+              "alpha",
+              "beta"
+            ],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "reference_identity",
+          "harness": "json",
+          "input_tokens": 3065,
+          "latency_s": 4.698,
+          "model_calls": 3,
+          "output_tokens": 150,
+          "seed": 9941,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 3215,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "shared-green",
+              "touches": 1
+            },
+            "alias_b": {
+              "label": "shared-green",
+              "touches": 1
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "contract_invalid",
+          "family": "typed_nested_output",
+          "harness": "json",
+          "input_tokens": 6900,
+          "latency_s": 4.251,
+          "model_calls": 6,
+          "output_tokens": 135,
+          "seed": 9941,
+          "success": false,
+          "tool_errors": 1,
+          "total_tokens": 7035,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "relabel-a",
+              "touches": 1
+            },
+            "alias_b": {
+              "label": "relabel-a",
+              "touches": 1
+            },
+            "aliases_share_identity": true,
+            "counter": 1,
+            "journal": [
+              "first"
+            ],
+            "unstable_attempts": 2
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "error_recovery",
+          "harness": "json",
+          "input_tokens": 4122,
+          "latency_s": 6.244,
+          "model_calls": 4,
+          "output_tokens": 200,
+          "seed": 9941,
+          "success": true,
+          "tool_errors": 1,
+          "total_tokens": 4322,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 2
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "multi_step_tools",
+          "harness": "json",
+          "input_tokens": 4083,
+          "latency_s": 7.801,
+          "model_calls": 4,
+          "output_tokens": 251,
+          "seed": 9941,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 4334,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "state_mutation",
+          "harness": "json",
+          "input_tokens": 3325,
+          "latency_s": 5.16,
+          "model_calls": 3,
+          "output_tokens": 166,
+          "seed": 11047,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 3491,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 12,
+            "journal": [
+              "alpha",
+              "beta"
+            ],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "reference_identity",
+          "harness": "json",
+          "input_tokens": 3065,
+          "latency_s": 5.343,
+          "model_calls": 3,
+          "output_tokens": 172,
+          "seed": 11047,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 3237,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "shared-green",
+              "touches": 1
+            },
+            "alias_b": {
+              "label": "shared-green",
+              "touches": 1
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "contract_invalid",
+          "family": "typed_nested_output",
+          "harness": "json",
+          "input_tokens": 6900,
+          "latency_s": 4.222,
+          "model_calls": 6,
+          "output_tokens": 135,
+          "seed": 11047,
+          "success": false,
+          "tool_errors": 1,
+          "total_tokens": 7035,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "relabel-a",
+              "touches": 1
+            },
+            "alias_b": {
+              "label": "relabel-a",
+              "touches": 1
+            },
+            "aliases_share_identity": true,
+            "counter": 1,
+            "journal": [
+              "first"
+            ],
+            "unstable_attempts": 2
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "error_recovery",
+          "harness": "json",
+          "input_tokens": 4122,
+          "latency_s": 4.695,
+          "model_calls": 4,
+          "output_tokens": 149,
+          "seed": 11047,
+          "success": true,
+          "tool_errors": 1,
+          "total_tokens": 4271,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 2
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "multi_step_tools",
+          "harness": "json",
+          "input_tokens": 4083,
+          "latency_s": 7.774,
+          "model_calls": 4,
+          "output_tokens": 251,
+          "seed": 11047,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 4334,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "state_mutation",
+          "harness": "json",
+          "input_tokens": 3325,
+          "latency_s": 5.203,
+          "model_calls": 3,
+          "output_tokens": 166,
+          "seed": 12157,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 3491,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 12,
+            "journal": [
+              "alpha",
+              "beta"
+            ],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "reference_identity",
+          "harness": "json",
+          "input_tokens": 3065,
+          "latency_s": 4.666,
+          "model_calls": 3,
+          "output_tokens": 150,
+          "seed": 12157,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 3215,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "shared-green",
+              "touches": 1
+            },
+            "alias_b": {
+              "label": "shared-green",
+              "touches": 1
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "contract_invalid",
+          "family": "typed_nested_output",
+          "harness": "json",
+          "input_tokens": 6900,
+          "latency_s": 4.233,
+          "model_calls": 6,
+          "output_tokens": 135,
+          "seed": 12157,
+          "success": false,
+          "tool_errors": 1,
+          "total_tokens": 7035,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "relabel-a",
+              "touches": 1
+            },
+            "alias_b": {
+              "label": "relabel-a",
+              "touches": 1
+            },
+            "aliases_share_identity": true,
+            "counter": 1,
+            "journal": [
+              "first"
+            ],
+            "unstable_attempts": 2
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "error_recovery",
+          "harness": "json",
+          "input_tokens": 4122,
+          "latency_s": 4.649,
+          "model_calls": 4,
+          "output_tokens": 149,
+          "seed": 12157,
+          "success": true,
+          "tool_errors": 1,
+          "total_tokens": 4271,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 2
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "multi_step_tools",
+          "harness": "json",
+          "input_tokens": 4083,
+          "latency_s": 7.786,
+          "model_calls": 4,
+          "output_tokens": 251,
+          "seed": 12157,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 4334,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "state_mutation",
+          "harness": "json",
+          "input_tokens": 3325,
+          "latency_s": 5.162,
+          "model_calls": 3,
+          "output_tokens": 166,
+          "seed": 13267,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 3491,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 12,
+            "journal": [
+              "alpha",
+              "beta"
+            ],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "reference_identity",
+          "harness": "json",
+          "input_tokens": 3065,
+          "latency_s": 5.174,
+          "model_calls": 3,
+          "output_tokens": 167,
+          "seed": 13267,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 3232,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "shared-green",
+              "touches": 1
+            },
+            "alias_b": {
+              "label": "shared-green",
+              "touches": 1
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "contract_invalid",
+          "family": "typed_nested_output",
+          "harness": "json",
+          "input_tokens": 6900,
+          "latency_s": 4.261,
+          "model_calls": 6,
+          "output_tokens": 135,
+          "seed": 13267,
+          "success": false,
+          "tool_errors": 1,
+          "total_tokens": 7035,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "relabel-a",
+              "touches": 1
+            },
+            "alias_b": {
+              "label": "relabel-a",
+              "touches": 1
+            },
+            "aliases_share_identity": true,
+            "counter": 1,
+            "journal": [
+              "first"
+            ],
+            "unstable_attempts": 2
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "error_recovery",
+          "harness": "json",
+          "input_tokens": 4122,
+          "latency_s": 4.721,
+          "model_calls": 4,
+          "output_tokens": 149,
+          "seed": 13267,
+          "success": true,
+          "tool_errors": 1,
+          "total_tokens": 4271,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 2
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "multi_step_tools",
+          "harness": "json",
+          "input_tokens": 4083,
+          "latency_s": 7.783,
+          "model_calls": 4,
+          "output_tokens": 251,
+          "seed": 13267,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 4334,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        }
+      ],
+      "run_ids": [
+        "c9618bc2-4211-467a-ad75-143472c3a616",
+        "cc3340e9-fb7c-42c8-8c7e-21837c03fff1"
+      ],
+      "run_wall_s": [
+        342.219,
+        313.218
+      ]
+    },
+    "nooa": {
+      "branches": [
+        "orx/toolchain-round-nooa-live",
+        "orx/nooa-live-independent-seeds",
+        "orx/nooa-live-independent-seeds-b"
+      ],
+      "label": "Typed live NOOA",
+      "records": [
+        {
+          "exception_type": null,
+          "failure_class": "wrong_checksum",
+          "family": "state_mutation",
+          "harness": "nooa",
+          "input_tokens": 2462,
+          "latency_s": 67.584,
+          "model_calls": 1,
+          "output_tokens": 265,
+          "seed": 1103,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 2727,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 12,
+            "journal": [
+              "alpha",
+              "beta"
+            ],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "wrong_checksum",
+          "family": "reference_identity",
+          "harness": "nooa",
+          "input_tokens": 2443,
+          "latency_s": 16.399,
+          "model_calls": 1,
+          "output_tokens": 554,
+          "seed": 1103,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 2997,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "shared-green",
+              "touches": 1
+            },
+            "alias_b": {
+              "label": "shared-green",
+              "touches": 1
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "typed_nested_output",
+          "harness": "nooa",
+          "input_tokens": 13149,
+          "latency_s": 47.856,
+          "model_calls": 4,
+          "output_tokens": 1648,
+          "seed": 1103,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 14797,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": "GenerationError",
+          "failure_class": "harness_exception",
+          "family": "error_recovery",
+          "harness": "nooa",
+          "input_tokens": 23587,
+          "latency_s": 75.516,
+          "model_calls": 6,
+          "output_tokens": 2590,
+          "seed": 1103,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 26177,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 7
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "wrong_answer",
+          "family": "multi_step_tools",
+          "harness": "nooa",
+          "input_tokens": 5467,
+          "latency_s": 25.943,
+          "model_calls": 2,
+          "output_tokens": 837,
+          "seed": 1103,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 6304,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "state_mutation",
+          "harness": "nooa",
+          "input_tokens": 2463,
+          "latency_s": 10.415,
+          "model_calls": 1,
+          "output_tokens": 335,
+          "seed": 2207,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 2798,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 12,
+            "journal": [
+              "alpha",
+              "beta"
+            ],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": "GenerationError",
+          "failure_class": "harness_exception",
+          "family": "reference_identity",
+          "harness": "nooa",
+          "input_tokens": 15634,
+          "latency_s": 124.179,
+          "model_calls": 4,
+          "output_tokens": 4013,
+          "seed": 2207,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 19647,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "shared-green",
+              "touches": 1
+            },
+            "alias_b": {
+              "label": "shared-green",
+              "touches": 1
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "typed_nested_output",
+          "harness": "nooa",
+          "input_tokens": 8932,
+          "latency_s": 34.332,
+          "model_calls": 3,
+          "output_tokens": 1106,
+          "seed": 2207,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 10038,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": "GenerationError",
+          "failure_class": "harness_exception",
+          "family": "error_recovery",
+          "harness": "nooa",
+          "input_tokens": 23489,
+          "latency_s": 85.611,
+          "model_calls": 6,
+          "output_tokens": 2744,
+          "seed": 2207,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 26233,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 7
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "wrong_checksum",
+          "family": "multi_step_tools",
+          "harness": "nooa",
+          "input_tokens": 9275,
+          "latency_s": 42.702,
+          "model_calls": 3,
+          "output_tokens": 1379,
+          "seed": 2207,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 10654,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "state_mutation",
+          "harness": "nooa",
+          "input_tokens": 2461,
+          "latency_s": 9.652,
+          "model_calls": 1,
+          "output_tokens": 310,
+          "seed": 3301,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 2771,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 12,
+            "journal": [
+              "alpha",
+              "beta"
+            ],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "wrong_checksum",
+          "family": "reference_identity",
+          "harness": "nooa",
+          "input_tokens": 2444,
+          "latency_s": 17.105,
+          "model_calls": 1,
+          "output_tokens": 554,
+          "seed": 3301,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 2998,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "shared-green",
+              "touches": 1
+            },
+            "alias_b": {
+              "label": "shared-green",
+              "touches": 1
+            },
+            "aliases_share_identity": true,
+            "counter": 1,
+            "journal": [
+              "shared-green"
+            ],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "typed_nested_output",
+          "harness": "nooa",
+          "input_tokens": 8794,
+          "latency_s": 30.903,
+          "model_calls": 3,
+          "output_tokens": 999,
+          "seed": 3301,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 9793,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "error_recovery",
+          "harness": "nooa",
+          "input_tokens": 9428,
+          "latency_s": 46.957,
+          "model_calls": 3,
+          "output_tokens": 1520,
+          "seed": 3301,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 10948,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 4
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "wrong_checksum",
+          "family": "multi_step_tools",
+          "harness": "nooa",
+          "input_tokens": 13457,
+          "latency_s": 55.266,
+          "model_calls": 4,
+          "output_tokens": 1781,
+          "seed": 3301,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 15238,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "wrong_checksum",
+          "family": "state_mutation",
+          "harness": "nooa",
+          "input_tokens": 2463,
+          "latency_s": 8.829,
+          "model_calls": 1,
+          "output_tokens": 285,
+          "seed": 4409,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 2748,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 12,
+            "journal": [
+              "alpha",
+              "beta"
+            ],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "wrong_checksum",
+          "family": "reference_identity",
+          "harness": "nooa",
+          "input_tokens": 2443,
+          "latency_s": 17.797,
+          "model_calls": 1,
+          "output_tokens": 573,
+          "seed": 4409,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 3016,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "shared-green",
+              "touches": 1
+            },
+            "alias_b": {
+              "label": "shared-green",
+              "touches": 1
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "typed_nested_output",
+          "harness": "nooa",
+          "input_tokens": 9515,
+          "latency_s": 55.052,
+          "model_calls": 3,
+          "output_tokens": 1776,
+          "seed": 4409,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 11291,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "error_recovery",
+          "harness": "nooa",
+          "input_tokens": 5502,
+          "latency_s": 26.421,
+          "model_calls": 2,
+          "output_tokens": 843,
+          "seed": 4409,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 6345,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 3
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "wrong_answer",
+          "family": "multi_step_tools",
+          "harness": "nooa",
+          "input_tokens": 5453,
+          "latency_s": 24.342,
+          "model_calls": 2,
+          "output_tokens": 777,
+          "seed": 4409,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 6230,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "wrong_checksum",
+          "family": "state_mutation",
+          "harness": "nooa",
+          "input_tokens": 2464,
+          "latency_s": 8.834,
+          "model_calls": 1,
+          "output_tokens": 283,
+          "seed": 5519,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 2747,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 12,
+            "journal": [
+              "alpha",
+              "beta"
+            ],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "wrong_checksum",
+          "family": "reference_identity",
+          "harness": "nooa",
+          "input_tokens": 2443,
+          "latency_s": 13.445,
+          "model_calls": 1,
+          "output_tokens": 432,
+          "seed": 5519,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 2875,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "shared-green",
+              "touches": 1
+            },
+            "alias_b": {
+              "label": "shared-green",
+              "touches": 1
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "typed_nested_output",
+          "harness": "nooa",
+          "input_tokens": 9155,
+          "latency_s": 42.354,
+          "model_calls": 3,
+          "output_tokens": 1361,
+          "seed": 5519,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 10516,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "error_recovery",
+          "harness": "nooa",
+          "input_tokens": 5420,
+          "latency_s": 21.595,
+          "model_calls": 2,
+          "output_tokens": 699,
+          "seed": 5519,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 6119,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 5
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "wrong_answer",
+          "family": "multi_step_tools",
+          "harness": "nooa",
+          "input_tokens": 5627,
+          "latency_s": 32.978,
+          "model_calls": 2,
+          "output_tokens": 1076,
+          "seed": 5519,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 6703,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "wrong_checksum",
+          "family": "state_mutation",
+          "harness": "nooa",
+          "input_tokens": 2463,
+          "latency_s": 8.454,
+          "model_calls": 1,
+          "output_tokens": 276,
+          "seed": 6619,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 2739,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 12,
+            "journal": [
+              "alpha",
+              "beta"
+            ],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "wrong_checksum",
+          "family": "reference_identity",
+          "harness": "nooa",
+          "input_tokens": 2442,
+          "latency_s": 21.972,
+          "model_calls": 1,
+          "output_tokens": 718,
+          "seed": 6619,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 3160,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "shared-green",
+              "touches": 1
+            },
+            "alias_b": {
+              "label": "shared-green",
+              "touches": 1
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "typed_nested_output",
+          "harness": "nooa",
+          "input_tokens": 9132,
+          "latency_s": 41.486,
+          "model_calls": 3,
+          "output_tokens": 1351,
+          "seed": 6619,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 10483,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "error_recovery",
+          "harness": "nooa",
+          "input_tokens": 21392,
+          "latency_s": 104.797,
+          "model_calls": 5,
+          "output_tokens": 3407,
+          "seed": 6619,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 24799,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 2
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "wrong_checksum",
+          "family": "multi_step_tools",
+          "harness": "nooa",
+          "input_tokens": 2458,
+          "latency_s": 16.364,
+          "model_calls": 1,
+          "output_tokens": 534,
+          "seed": 6619,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 2992,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "wrong_checksum",
+          "family": "state_mutation",
+          "harness": "nooa",
+          "input_tokens": 2464,
+          "latency_s": 72.143,
+          "model_calls": 1,
+          "output_tokens": 368,
+          "seed": 7723,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 2832,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 12,
+            "journal": [
+              "alpha",
+              "beta"
+            ],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "wrong_checksum",
+          "family": "reference_identity",
+          "harness": "nooa",
+          "input_tokens": 2443,
+          "latency_s": 13.276,
+          "model_calls": 1,
+          "output_tokens": 419,
+          "seed": 7723,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 2862,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "shared-green",
+              "touches": 1
+            },
+            "alias_b": {
+              "label": "shared-green",
+              "touches": 1
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "typed_nested_output",
+          "harness": "nooa",
+          "input_tokens": 13370,
+          "latency_s": 51.821,
+          "model_calls": 4,
+          "output_tokens": 1672,
+          "seed": 7723,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 15042,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": "GenerationError",
+          "failure_class": "harness_exception",
+          "family": "error_recovery",
+          "harness": "nooa",
+          "input_tokens": 22837,
+          "latency_s": 73.694,
+          "model_calls": 6,
+          "output_tokens": 2375,
+          "seed": 7723,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 25212,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 12
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "wrong_answer",
+          "family": "multi_step_tools",
+          "harness": "nooa",
+          "input_tokens": 5705,
+          "latency_s": 37.859,
+          "model_calls": 2,
+          "output_tokens": 1224,
+          "seed": 7723,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 6929,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "wrong_checksum",
+          "family": "state_mutation",
+          "harness": "nooa",
+          "input_tokens": 2464,
+          "latency_s": 9.725,
+          "model_calls": 1,
+          "output_tokens": 313,
+          "seed": 8837,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 2777,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 12,
+            "journal": [
+              "alpha",
+              "beta"
+            ],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "identity_or_alias_effect_lost",
+          "family": "reference_identity",
+          "harness": "nooa",
+          "input_tokens": 5406,
+          "latency_s": 23.945,
+          "model_calls": 2,
+          "output_tokens": 772,
+          "seed": 8837,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 6178,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "shared-green",
+              "touches": 2
+            },
+            "alias_b": {
+              "label": "shared-green",
+              "touches": 2
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "typed_nested_output",
+          "harness": "nooa",
+          "input_tokens": 12701,
+          "latency_s": 39.329,
+          "model_calls": 4,
+          "output_tokens": 1306,
+          "seed": 8837,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 14007,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "error_recovery",
+          "harness": "nooa",
+          "input_tokens": 5452,
+          "latency_s": 22.523,
+          "model_calls": 2,
+          "output_tokens": 780,
+          "seed": 8837,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 6232,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 4
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "wrong_answer",
+          "family": "multi_step_tools",
+          "harness": "nooa",
+          "input_tokens": 5712,
+          "latency_s": 35.901,
+          "model_calls": 2,
+          "output_tokens": 1245,
+          "seed": 8837,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 6957,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "state_mutation",
+          "harness": "nooa",
+          "input_tokens": 2463,
+          "latency_s": 12.637,
+          "model_calls": 1,
+          "output_tokens": 407,
+          "seed": 9901,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 2870,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 12,
+            "journal": [
+              "alpha",
+              "beta"
+            ],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "wrong_checksum",
+          "family": "reference_identity",
+          "harness": "nooa",
+          "input_tokens": 2440,
+          "latency_s": 18.983,
+          "model_calls": 1,
+          "output_tokens": 613,
+          "seed": 9901,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 3053,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "shared-green",
+              "touches": 1
+            },
+            "alias_b": {
+              "label": "shared-green",
+              "touches": 1
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "typed_nested_output",
+          "harness": "nooa",
+          "input_tokens": 5504,
+          "latency_s": 28.344,
+          "model_calls": 2,
+          "output_tokens": 916,
+          "seed": 9901,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 6420,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": "GenerationError",
+          "failure_class": "harness_exception",
+          "family": "error_recovery",
+          "harness": "nooa",
+          "input_tokens": 24311,
+          "latency_s": 91.769,
+          "model_calls": 6,
+          "output_tokens": 2809,
+          "seed": 9901,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 27120,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 12
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "wrong_checksum",
+          "family": "multi_step_tools",
+          "harness": "nooa",
+          "input_tokens": 5487,
+          "latency_s": 27.321,
+          "model_calls": 2,
+          "output_tokens": 879,
+          "seed": 9901,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 6366,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "wrong_checksum",
+          "family": "state_mutation",
+          "harness": "nooa",
+          "input_tokens": 2461,
+          "latency_s": 67.541,
+          "model_calls": 1,
+          "output_tokens": 300,
+          "seed": 10009,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 2761,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 12,
+            "journal": [
+              "alpha",
+              "beta"
+            ],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "wrong_checksum",
+          "family": "reference_identity",
+          "harness": "nooa",
+          "input_tokens": 2441,
+          "latency_s": 14.022,
+          "model_calls": 1,
+          "output_tokens": 479,
+          "seed": 10009,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 2920,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "shared-green",
+              "touches": 1
+            },
+            "alias_b": {
+              "label": "shared-green",
+              "touches": 1
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "typed_nested_output",
+          "harness": "nooa",
+          "input_tokens": 17646,
+          "latency_s": 56.958,
+          "model_calls": 5,
+          "output_tokens": 1959,
+          "seed": 10009,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 19605,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "wrong_checksum",
+          "family": "error_recovery",
+          "harness": "nooa",
+          "input_tokens": 13374,
+          "latency_s": 57.552,
+          "model_calls": 4,
+          "output_tokens": 1978,
+          "seed": 10009,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 15352,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 5
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "wrong_answer",
+          "family": "multi_step_tools",
+          "harness": "nooa",
+          "input_tokens": 2458,
+          "latency_s": 16.328,
+          "model_calls": 1,
+          "output_tokens": 568,
+          "seed": 10009,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 3026,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "state_mutation",
+          "harness": "nooa",
+          "input_tokens": 2464,
+          "latency_s": 9.482,
+          "model_calls": 1,
+          "output_tokens": 329,
+          "seed": 11113,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 2793,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 12,
+            "journal": [
+              "alpha",
+              "beta"
+            ],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "reference_identity",
+          "harness": "nooa",
+          "input_tokens": 15497,
+          "latency_s": 90.246,
+          "model_calls": 4,
+          "output_tokens": 3130,
+          "seed": 11113,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 18627,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "shared-green",
+              "touches": 1
+            },
+            "alias_b": {
+              "label": "shared-green",
+              "touches": 1
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "typed_nested_output",
+          "harness": "nooa",
+          "input_tokens": 5406,
+          "latency_s": 19.379,
+          "model_calls": 2,
+          "output_tokens": 671,
+          "seed": 11113,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 6077,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "error_recovery",
+          "harness": "nooa",
+          "input_tokens": 9056,
+          "latency_s": 40.205,
+          "model_calls": 3,
+          "output_tokens": 1389,
+          "seed": 11113,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 10445,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 4
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "wrong_checksum",
+          "family": "multi_step_tools",
+          "harness": "nooa",
+          "input_tokens": 5729,
+          "latency_s": 37.468,
+          "model_calls": 2,
+          "output_tokens": 1289,
+          "seed": 11113,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 7018,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "state_mutation",
+          "harness": "nooa",
+          "input_tokens": 2463,
+          "latency_s": 6.71,
+          "model_calls": 1,
+          "output_tokens": 233,
+          "seed": 12203,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 2696,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 12,
+            "journal": [
+              "alpha",
+              "beta"
+            ],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "wrong_checksum",
+          "family": "reference_identity",
+          "harness": "nooa",
+          "input_tokens": 2444,
+          "latency_s": 15.808,
+          "model_calls": 1,
+          "output_tokens": 552,
+          "seed": 12203,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 2996,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "shared-green",
+              "touches": 1
+            },
+            "alias_b": {
+              "label": "shared-green",
+              "touches": 1
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "typed_nested_output",
+          "harness": "nooa",
+          "input_tokens": 12851,
+          "latency_s": 42.399,
+          "model_calls": 4,
+          "output_tokens": 1467,
+          "seed": 12203,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 14318,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "error_recovery",
+          "harness": "nooa",
+          "input_tokens": 5446,
+          "latency_s": 21.854,
+          "model_calls": 2,
+          "output_tokens": 758,
+          "seed": 12203,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 6204,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 4
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "wrong_answer",
+          "family": "multi_step_tools",
+          "harness": "nooa",
+          "input_tokens": 5589,
+          "latency_s": 30.465,
+          "model_calls": 2,
+          "output_tokens": 1056,
+          "seed": 12203,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 6645,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        }
+      ],
+      "run_ids": [
+        "47939711-9acd-4472-aff1-bb412adab978",
+        "cb55ff7e-2749-4640-9ba1-00a54b655a41",
+        "63f5344d-d7cc-459b-99ac-8929fea67566"
+      ],
+      "run_wall_s": [
+        1250.216,
+        649.334,
+        616.482
+      ]
+    },
+    "nooa_no_validation": {
+      "branches": [
+        "orx/validation-ablation-shard-a",
+        "orx/validation-ablation-independent-seeds"
+      ],
+      "label": "NOOA, no validation",
+      "records": [
+        {
+          "exception_type": null,
+          "failure_class": "contract_invalid",
+          "family": "state_mutation",
+          "harness": "nooa_no_validation",
+          "input_tokens": 8503,
+          "latency_s": 90.852,
+          "model_calls": 3,
+          "output_tokens": 739,
+          "seed": 1103,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 9242,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 12,
+            "journal": [
+              "alpha",
+              "beta"
+            ],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "contract_invalid",
+          "family": "reference_identity",
+          "harness": "nooa_no_validation",
+          "input_tokens": 2262,
+          "latency_s": 17.965,
+          "model_calls": 1,
+          "output_tokens": 617,
+          "seed": 1103,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 2879,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "shared-green",
+              "touches": 1
+            },
+            "alias_b": {
+              "label": "shared-green",
+              "touches": 1
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "contract_invalid",
+          "family": "typed_nested_output",
+          "harness": "nooa_no_validation",
+          "input_tokens": 5138,
+          "latency_s": 25.913,
+          "model_calls": 2,
+          "output_tokens": 904,
+          "seed": 1103,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 6042,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "contract_invalid",
+          "family": "error_recovery",
+          "harness": "nooa_no_validation",
+          "input_tokens": 5104,
+          "latency_s": 24.561,
+          "model_calls": 2,
+          "output_tokens": 851,
+          "seed": 1103,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 5955,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 3
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "contract_invalid",
+          "family": "multi_step_tools",
+          "harness": "nooa_no_validation",
+          "input_tokens": 2276,
+          "latency_s": 14.852,
+          "model_calls": 1,
+          "output_tokens": 516,
+          "seed": 1103,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 2792,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "contract_invalid",
+          "family": "state_mutation",
+          "harness": "nooa_no_validation",
+          "input_tokens": 2282,
+          "latency_s": 5.358,
+          "model_calls": 1,
+          "output_tokens": 185,
+          "seed": 2207,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 2467,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 12,
+            "journal": [
+              "alpha",
+              "beta"
+            ],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "contract_invalid",
+          "family": "reference_identity",
+          "harness": "nooa_no_validation",
+          "input_tokens": 2262,
+          "latency_s": 27.917,
+          "model_calls": 1,
+          "output_tokens": 973,
+          "seed": 2207,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 3235,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "shared-green",
+              "touches": 1
+            },
+            "alias_b": {
+              "label": "shared-green",
+              "touches": 1
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "contract_invalid",
+          "family": "typed_nested_output",
+          "harness": "nooa_no_validation",
+          "input_tokens": 8221,
+          "latency_s": 26.076,
+          "model_calls": 3,
+          "output_tokens": 906,
+          "seed": 2207,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 9127,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "contract_invalid",
+          "family": "error_recovery",
+          "harness": "nooa_no_validation",
+          "input_tokens": 5163,
+          "latency_s": 25.696,
+          "model_calls": 2,
+          "output_tokens": 883,
+          "seed": 2207,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 6046,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 6
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "contract_invalid",
+          "family": "multi_step_tools",
+          "harness": "nooa_no_validation",
+          "input_tokens": 5136,
+          "latency_s": 24.426,
+          "model_calls": 2,
+          "output_tokens": 839,
+          "seed": 2207,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 5975,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "contract_invalid",
+          "family": "state_mutation",
+          "harness": "nooa_no_validation",
+          "input_tokens": 2283,
+          "latency_s": 5.323,
+          "model_calls": 1,
+          "output_tokens": 186,
+          "seed": 3301,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 2469,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 12,
+            "journal": [
+              "alpha",
+              "beta"
+            ],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "contract_invalid",
+          "family": "reference_identity",
+          "harness": "nooa_no_validation",
+          "input_tokens": 2262,
+          "latency_s": 15.104,
+          "model_calls": 1,
+          "output_tokens": 532,
+          "seed": 3301,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 2794,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "shared-green",
+              "touches": 1
+            },
+            "alias_b": {
+              "label": "shared-green",
+              "touches": 1
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "contract_invalid",
+          "family": "typed_nested_output",
+          "harness": "nooa_no_validation",
+          "input_tokens": 4962,
+          "latency_s": 17.579,
+          "model_calls": 2,
+          "output_tokens": 614,
+          "seed": 3301,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 5576,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": "GenerationError",
+          "failure_class": "harness_exception",
+          "family": "error_recovery",
+          "harness": "nooa_no_validation",
+          "input_tokens": 23857,
+          "latency_s": 90.079,
+          "model_calls": 6,
+          "output_tokens": 3145,
+          "seed": 3301,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 27002,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 7
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "contract_invalid",
+          "family": "multi_step_tools",
+          "harness": "nooa_no_validation",
+          "input_tokens": 5265,
+          "latency_s": 30.825,
+          "model_calls": 2,
+          "output_tokens": 1078,
+          "seed": 3301,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 6343,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "contract_invalid",
+          "family": "state_mutation",
+          "harness": "nooa_no_validation",
+          "input_tokens": 2280,
+          "latency_s": 67.19,
+          "model_calls": 1,
+          "output_tokens": 240,
+          "seed": 7723,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 2520,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 12,
+            "journal": [
+              "alpha",
+              "beta"
+            ],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "contract_invalid",
+          "family": "reference_identity",
+          "harness": "nooa_no_validation",
+          "input_tokens": 2262,
+          "latency_s": 16.757,
+          "model_calls": 1,
+          "output_tokens": 537,
+          "seed": 7723,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 2799,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "shared-green",
+              "touches": 2
+            },
+            "alias_b": {
+              "label": "shared-green",
+              "touches": 2
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "contract_invalid",
+          "family": "typed_nested_output",
+          "harness": "nooa_no_validation",
+          "input_tokens": 9340,
+          "latency_s": 62.726,
+          "model_calls": 3,
+          "output_tokens": 1844,
+          "seed": 7723,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 11184,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "contract_invalid",
+          "family": "error_recovery",
+          "harness": "nooa_no_validation",
+          "input_tokens": 4957,
+          "latency_s": 17.491,
+          "model_calls": 2,
+          "output_tokens": 576,
+          "seed": 7723,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 5533,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 4
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "contract_invalid",
+          "family": "multi_step_tools",
+          "harness": "nooa_no_validation",
+          "input_tokens": 5243,
+          "latency_s": 29.884,
+          "model_calls": 2,
+          "output_tokens": 1032,
+          "seed": 7723,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 6275,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "contract_invalid",
+          "family": "state_mutation",
+          "harness": "nooa_no_validation",
+          "input_tokens": 2282,
+          "latency_s": 5.401,
+          "model_calls": 1,
+          "output_tokens": 185,
+          "seed": 8837,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 2467,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 12,
+            "journal": [
+              "alpha",
+              "beta"
+            ],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "contract_invalid",
+          "family": "reference_identity",
+          "harness": "nooa_no_validation",
+          "input_tokens": 2261,
+          "latency_s": 16.485,
+          "model_calls": 1,
+          "output_tokens": 570,
+          "seed": 8837,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 2831,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "shared-green",
+              "touches": 1
+            },
+            "alias_b": {
+              "label": "shared-green",
+              "touches": 1
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "contract_invalid",
+          "family": "typed_nested_output",
+          "harness": "nooa_no_validation",
+          "input_tokens": 4968,
+          "latency_s": 19.003,
+          "model_calls": 2,
+          "output_tokens": 613,
+          "seed": 8837,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 5581,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "contract_invalid",
+          "family": "error_recovery",
+          "harness": "nooa_no_validation",
+          "input_tokens": 18215,
+          "latency_s": 66.563,
+          "model_calls": 5,
+          "output_tokens": 2121,
+          "seed": 8837,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 20336,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 9
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "contract_invalid",
+          "family": "multi_step_tools",
+          "harness": "nooa_no_validation",
+          "input_tokens": 5169,
+          "latency_s": 28.685,
+          "model_calls": 2,
+          "output_tokens": 914,
+          "seed": 8837,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 6083,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "contract_invalid",
+          "family": "state_mutation",
+          "harness": "nooa_no_validation",
+          "input_tokens": 2282,
+          "latency_s": 5.672,
+          "model_calls": 1,
+          "output_tokens": 181,
+          "seed": 9901,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 2463,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 12,
+            "journal": [
+              "alpha",
+              "beta"
+            ],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "contract_invalid",
+          "family": "reference_identity",
+          "harness": "nooa_no_validation",
+          "input_tokens": 2262,
+          "latency_s": 25.328,
+          "model_calls": 1,
+          "output_tokens": 811,
+          "seed": 9901,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 3073,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "shared-green",
+              "touches": 1
+            },
+            "alias_b": {
+              "label": "shared-green",
+              "touches": 1
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "contract_invalid",
+          "family": "typed_nested_output",
+          "harness": "nooa_no_validation",
+          "input_tokens": 5139,
+          "latency_s": 28.065,
+          "model_calls": 2,
+          "output_tokens": 889,
+          "seed": 9901,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 6028,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "contract_invalid",
+          "family": "error_recovery",
+          "harness": "nooa_no_validation",
+          "input_tokens": 8420,
+          "latency_s": 41.721,
+          "model_calls": 3,
+          "output_tokens": 1298,
+          "seed": 9901,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 9718,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 15
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "contract_invalid",
+          "family": "multi_step_tools",
+          "harness": "nooa_no_validation",
+          "input_tokens": 9292,
+          "latency_s": 59.218,
+          "model_calls": 3,
+          "output_tokens": 1881,
+          "seed": 9901,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 11173,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        }
+      ],
+      "run_ids": [
+        "f6e4ddbd-f7e7-4af2-9226-0c222c10900e",
+        "8d2501a9-27cf-4032-81a9-12fb69e96627"
+      ],
+      "run_wall_s": [
+        542.604,
+        585.256
+      ]
+    },
+    "nooa_serialized": {
+      "branches": [
+        "orx/toolchain-round-nooa-serialized",
+        "orx/serialized-copy-independent-seeds"
+      ],
+      "label": "NOOA, serialized copies",
+      "records": [
+        {
+          "exception_type": null,
+          "failure_class": "state_not_mutated",
+          "family": "state_mutation",
+          "harness": "nooa_serialized",
+          "input_tokens": 5372,
+          "latency_s": 79.539,
+          "model_calls": 2,
+          "output_tokens": 684,
+          "seed": 1103,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 6056,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": "GenerationError",
+          "failure_class": "harness_exception",
+          "family": "reference_identity",
+          "harness": "nooa_serialized",
+          "input_tokens": 29408,
+          "latency_s": 143.697,
+          "model_calls": 6,
+          "output_tokens": 4846,
+          "seed": 1103,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 34254,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 1
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "typed_nested_output",
+          "harness": "nooa_serialized",
+          "input_tokens": 2394,
+          "latency_s": 11.065,
+          "model_calls": 1,
+          "output_tokens": 368,
+          "seed": 1103,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 2762,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "error_recovery",
+          "harness": "nooa_serialized",
+          "input_tokens": 5475,
+          "latency_s": 28.265,
+          "model_calls": 2,
+          "output_tokens": 959,
+          "seed": 1103,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 6434,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 3
+          }
+        },
+        {
+          "exception_type": "GenerationError",
+          "failure_class": "harness_exception",
+          "family": "multi_step_tools",
+          "harness": "nooa_serialized",
+          "input_tokens": 27272,
+          "latency_s": 80.138,
+          "model_calls": 6,
+          "output_tokens": 2683,
+          "seed": 1103,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 29955,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "state_not_mutated",
+          "family": "state_mutation",
+          "harness": "nooa_serialized",
+          "input_tokens": 5614,
+          "latency_s": 33.609,
+          "model_calls": 2,
+          "output_tokens": 1058,
+          "seed": 2207,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 6672,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "wrong_checksum",
+          "family": "reference_identity",
+          "harness": "nooa_serialized",
+          "input_tokens": 2395,
+          "latency_s": 10.682,
+          "model_calls": 1,
+          "output_tokens": 358,
+          "seed": 2207,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 2753,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "typed_nested_output",
+          "harness": "nooa_serialized",
+          "input_tokens": 2397,
+          "latency_s": 13.906,
+          "model_calls": 1,
+          "output_tokens": 469,
+          "seed": 2207,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 2866,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "error_recovery",
+          "harness": "nooa_serialized",
+          "input_tokens": 5442,
+          "latency_s": 40.824,
+          "model_calls": 2,
+          "output_tokens": 993,
+          "seed": 2207,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 6435,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 3
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "wrong_checksum",
+          "family": "multi_step_tools",
+          "harness": "nooa_serialized",
+          "input_tokens": 5518,
+          "latency_s": 32.561,
+          "model_calls": 2,
+          "output_tokens": 1088,
+          "seed": 2207,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 6606,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "state_not_mutated",
+          "family": "state_mutation",
+          "harness": "nooa_serialized",
+          "input_tokens": 5529,
+          "latency_s": 25.91,
+          "model_calls": 2,
+          "output_tokens": 878,
+          "seed": 3301,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 6407,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "wrong_checksum",
+          "family": "reference_identity",
+          "harness": "nooa_serialized",
+          "input_tokens": 2395,
+          "latency_s": 14.32,
+          "model_calls": 1,
+          "output_tokens": 483,
+          "seed": 3301,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 2878,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "typed_nested_output",
+          "harness": "nooa_serialized",
+          "input_tokens": 2398,
+          "latency_s": 10.834,
+          "model_calls": 1,
+          "output_tokens": 362,
+          "seed": 3301,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 2760,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "error_recovery",
+          "harness": "nooa_serialized",
+          "input_tokens": 5437,
+          "latency_s": 25.851,
+          "model_calls": 2,
+          "output_tokens": 874,
+          "seed": 3301,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 6311,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 3
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "wrong_answer",
+          "family": "multi_step_tools",
+          "harness": "nooa_serialized",
+          "input_tokens": 5570,
+          "latency_s": 36.643,
+          "model_calls": 2,
+          "output_tokens": 1238,
+          "seed": 3301,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 6808,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "state_not_mutated",
+          "family": "state_mutation",
+          "harness": "nooa_serialized",
+          "input_tokens": 5470,
+          "latency_s": 27.621,
+          "model_calls": 2,
+          "output_tokens": 874,
+          "seed": 4409,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 6344,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": "GenerationError",
+          "failure_class": "harness_exception",
+          "family": "reference_identity",
+          "harness": "nooa_serialized",
+          "input_tokens": 27972,
+          "latency_s": 107.335,
+          "model_calls": 6,
+          "output_tokens": 3351,
+          "seed": 4409,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 31323,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "typed_nested_output",
+          "harness": "nooa_serialized",
+          "input_tokens": 5451,
+          "latency_s": 32.326,
+          "model_calls": 2,
+          "output_tokens": 1015,
+          "seed": 4409,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 6466,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "error_recovery",
+          "harness": "nooa_serialized",
+          "input_tokens": 13352,
+          "latency_s": 72.904,
+          "model_calls": 4,
+          "output_tokens": 2290,
+          "seed": 4409,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 15642,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 8
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "wrong_checksum",
+          "family": "multi_step_tools",
+          "harness": "nooa_serialized",
+          "input_tokens": 2409,
+          "latency_s": 18.559,
+          "model_calls": 1,
+          "output_tokens": 579,
+          "seed": 4409,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 2988,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "state_not_mutated",
+          "family": "state_mutation",
+          "harness": "nooa_serialized",
+          "input_tokens": 5418,
+          "latency_s": 28.024,
+          "model_calls": 2,
+          "output_tokens": 873,
+          "seed": 5519,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 6291,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": "GenerationError",
+          "failure_class": "harness_exception",
+          "family": "reference_identity",
+          "harness": "nooa_serialized",
+          "input_tokens": 29824,
+          "latency_s": 133.738,
+          "model_calls": 6,
+          "output_tokens": 4204,
+          "seed": 5519,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 34028,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "typed_nested_output",
+          "harness": "nooa_serialized",
+          "input_tokens": 2398,
+          "latency_s": 12.768,
+          "model_calls": 1,
+          "output_tokens": 398,
+          "seed": 5519,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 2796,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "error_recovery",
+          "harness": "nooa_serialized",
+          "input_tokens": 8975,
+          "latency_s": 41.953,
+          "model_calls": 3,
+          "output_tokens": 1314,
+          "seed": 5519,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 10289,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 5
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "wrong_answer",
+          "family": "multi_step_tools",
+          "harness": "nooa_serialized",
+          "input_tokens": 5615,
+          "latency_s": 39.37,
+          "model_calls": 2,
+          "output_tokens": 1241,
+          "seed": 5519,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 6856,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "state_not_mutated",
+          "family": "state_mutation",
+          "harness": "nooa_serialized",
+          "input_tokens": 5465,
+          "latency_s": 27.876,
+          "model_calls": 2,
+          "output_tokens": 874,
+          "seed": 6619,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 6339,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "wrong_checksum",
+          "family": "reference_identity",
+          "harness": "nooa_serialized",
+          "input_tokens": 2394,
+          "latency_s": 24.818,
+          "model_calls": 1,
+          "output_tokens": 777,
+          "seed": 6619,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 3171,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "typed_nested_output",
+          "harness": "nooa_serialized",
+          "input_tokens": 5637,
+          "latency_s": 39.184,
+          "model_calls": 2,
+          "output_tokens": 1310,
+          "seed": 6619,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 6947,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "error_recovery",
+          "harness": "nooa_serialized",
+          "input_tokens": 9095,
+          "latency_s": 39.714,
+          "model_calls": 3,
+          "output_tokens": 1309,
+          "seed": 6619,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 10404,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 3
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "wrong_checksum",
+          "family": "multi_step_tools",
+          "harness": "nooa_serialized",
+          "input_tokens": 2409,
+          "latency_s": 18.795,
+          "model_calls": 1,
+          "output_tokens": 598,
+          "seed": 6619,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 3007,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "state_not_mutated",
+          "family": "state_mutation",
+          "harness": "nooa_serialized",
+          "input_tokens": 8714,
+          "latency_s": 88.574,
+          "model_calls": 3,
+          "output_tokens": 909,
+          "seed": 7723,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 9623,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "wrong_checksum",
+          "family": "reference_identity",
+          "harness": "nooa_serialized",
+          "input_tokens": 16042,
+          "latency_s": 100.371,
+          "model_calls": 4,
+          "output_tokens": 3465,
+          "seed": 7723,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 19507,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "typed_nested_output",
+          "harness": "nooa_serialized",
+          "input_tokens": 2397,
+          "latency_s": 14.604,
+          "model_calls": 1,
+          "output_tokens": 508,
+          "seed": 7723,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 2905,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "error_recovery",
+          "harness": "nooa_serialized",
+          "input_tokens": 5534,
+          "latency_s": 24.637,
+          "model_calls": 2,
+          "output_tokens": 859,
+          "seed": 7723,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 6393,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 6
+          }
+        },
+        {
+          "exception_type": "GenerationError",
+          "failure_class": "harness_exception",
+          "family": "multi_step_tools",
+          "harness": "nooa_serialized",
+          "input_tokens": 22140,
+          "latency_s": 128.249,
+          "model_calls": 5,
+          "output_tokens": 4359,
+          "seed": 7723,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 26499,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "state_not_mutated",
+          "family": "state_mutation",
+          "harness": "nooa_serialized",
+          "input_tokens": 9537,
+          "latency_s": 61.512,
+          "model_calls": 3,
+          "output_tokens": 1999,
+          "seed": 8837,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 11536,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": "GenerationError",
+          "failure_class": "harness_exception",
+          "family": "reference_identity",
+          "harness": "nooa_serialized",
+          "input_tokens": 30401,
+          "latency_s": 180.036,
+          "model_calls": 6,
+          "output_tokens": 5812,
+          "seed": 8837,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 36213,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "typed_nested_output",
+          "harness": "nooa_serialized",
+          "input_tokens": 5554,
+          "latency_s": 31.707,
+          "model_calls": 2,
+          "output_tokens": 1036,
+          "seed": 8837,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 6590,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "error_recovery",
+          "harness": "nooa_serialized",
+          "input_tokens": 14381,
+          "latency_s": 76.22,
+          "model_calls": 4,
+          "output_tokens": 2437,
+          "seed": 8837,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 16818,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 5
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "multi_step_tools",
+          "harness": "nooa_serialized",
+          "input_tokens": 5509,
+          "latency_s": 32.394,
+          "model_calls": 2,
+          "output_tokens": 1056,
+          "seed": 8837,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 6565,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "state_not_mutated",
+          "family": "state_mutation",
+          "harness": "nooa_serialized",
+          "input_tokens": 9518,
+          "latency_s": 53.452,
+          "model_calls": 3,
+          "output_tokens": 1759,
+          "seed": 9901,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 11277,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 3
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "wrong_checksum",
+          "family": "reference_identity",
+          "harness": "nooa_serialized",
+          "input_tokens": 2394,
+          "latency_s": 18.245,
+          "model_calls": 1,
+          "output_tokens": 618,
+          "seed": 9901,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 3012,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "typed_nested_output",
+          "harness": "nooa_serialized",
+          "input_tokens": 2396,
+          "latency_s": 15.1,
+          "model_calls": 1,
+          "output_tokens": 522,
+          "seed": 9901,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 2918,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "success",
+          "family": "error_recovery",
+          "harness": "nooa_serialized",
+          "input_tokens": 5492,
+          "latency_s": 26.833,
+          "model_calls": 2,
+          "output_tokens": 904,
+          "seed": 9901,
+          "success": true,
+          "tool_errors": 0,
+          "total_tokens": 6396,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 6
+          }
+        },
+        {
+          "exception_type": null,
+          "failure_class": "wrong_answer",
+          "family": "multi_step_tools",
+          "harness": "nooa_serialized",
+          "input_tokens": 2408,
+          "latency_s": 17.483,
+          "model_calls": 1,
+          "output_tokens": 598,
+          "seed": 9901,
+          "success": false,
+          "tool_errors": 0,
+          "total_tokens": 3006,
+          "validation_retries": 0,
+          "workspace": {
+            "alias_a": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "alias_b": {
+              "label": "unmodified",
+              "touches": 0
+            },
+            "aliases_share_identity": true,
+            "counter": 0,
+            "journal": [],
+            "unstable_attempts": 0
+          }
+        }
+      ],
+      "run_ids": [
+        "4b273409-57d6-4048-a030-52368bc8bc76",
+        "bb32402b-afe0-4262-a434-998aa32ee405"
+      ],
+      "run_wall_s": [
+        1372.907,
+        959.479
+      ]
+    }
+  },
+  "first_kubernetes_launch": "2026-07-27T01:05:09Z",
+  "gpu_model": "NVIDIA RTX PRO 6000 Blackwell",
+  "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+  "paper_id": "2607.20709",
+  "peak_concurrent_gpu_count": 16,
+  "sampling": {
+    "max_tokens": 1200,
+    "max_turns": 6,
+    "temperature": 0.2,
+    "top_p": 0.9
+  },
+  "schema_version": 1
+}

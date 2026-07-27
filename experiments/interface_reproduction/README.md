@@ -13,8 +13,9 @@ gains?
 The suite has five synthetic but executable capability families derived from
 the paper's targeted tests: live state mutation, pass-by-reference alias
 identity, nested typed output, recovery from a transient exception, and a
-dependent employee-directory/payroll calculation. Each condition runs all five
-families at six fixed sampling seeds. The four conditions are:
+dependent employee-directory/payroll calculation. The first matched round ran
+all five families at six fixed sampling seeds; disjoint seed blocks then tested
+robustness. The four conditions are:
 
 1. `json`: conventional JSON-schema tool calls with serialized observations.
 2. `nooa`: released NOOA CodeAct with typed live Python arguments and returns.
@@ -52,17 +53,18 @@ GPUs, runs the configured condition, and prints all evidence plus a compact
 
 ## Results summary
 
-Only complete Kubernetes runs created after 2026-07-27T00:54:41.419Z are
-counted. Aggregating independent seed batches, the JSON loop passed 48/60
-(80.0%), live NOOA passed 25/60 (41.7%), serialized-copy NOOA passed 19/45
-(42.2%), and NOOA without runtime return validation passed 0/30. Live NOOA was
-perfect on nested typed output (12/12), while JSON was 0/12. Over nine matched
-seeds, live objects passed state mutation 3/9 versus 0/9 for serialized copies;
-reference identity was 0/9 in both. The detailed synthesis, figures, limitations,
-and terminal evidence IDs are in
-[`reports/interface-reproduction/report.md`](../../reports/interface-reproduction/report.md)
-and [`results.json`](../../reports/interface-reproduction/results.json).
+Fresh Kubernetes runs created after 2026-07-27T00:54:41.419Z produced 195
+fully summarized trajectories. Strict executable success was 48/60 (80.0%)
+for JSON tools, 25/60 (41.7%) for typed live NOOA, 0/30 without return
+validation, and 19/45 (42.2%) with serialized copies. Thus this Qwen setup did
+not show an aggregate NOOA advantage.
 
-All formal evidence used OpenResearch Kubernetes, four NVIDIA RTX PRO 6000
-Blackwell GPUs per job, and 16 GPUs peak concurrently. The recovery evidence
-campaign used 0.988727 hours of queue-observed Kubernetes wall time.
+The mechanism checks were more favorable. Typed NOOA repaired nested output in
+12/12 trials versus 0/6 without validation. Live NOOA preserved 23/24 required
+state or alias effects, while serialized copies preserved 0/18. JSON
+server-side tools preserved 24/24 corresponding effects. See the
+[illustrated report](../../reports/interface-reproduction/report.md) and
+[compact records](../../reports/interface-reproduction/data/results.json).
+
+Compute used OpenResearch Kubernetes, NVIDIA RTX PRO 6000 Blackwell GPUs, a
+peak of 16 GPUs concurrently, and 1.15 hours actual elapsed wall time.
