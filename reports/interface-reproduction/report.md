@@ -18,7 +18,7 @@ The comparator was intentionally strong but minimal: ordinary JSON-schema functi
 uv sync --frozen --extra repro && uv run --extra repro python experiments/interface_reproduction/run.py
 ```
 
-All evidence ran on OpenResearch Kubernetes using **NVIDIA RTX PRO 6000 Blackwell** GPUs, four per job and **16 GPUs peak concurrently**. The fresh recovery evidence window was 2026-07-27 00:55:19–02:04:28 UTC: **1.15 hours elapsed**, including setup and parallel runs.
+All evidence ran on OpenResearch Kubernetes using **NVIDIA RTX PRO 6000 Blackwell** GPUs, four per job and **16 GPUs peak concurrently**. The queue runner measured **0.988727 hours of Kubernetes campaign wall time** across 11 successful runs with terminal logs; formal rates below use the nine runs that emitted complete terminal summary records.
 
 ## Where the effect came from
 

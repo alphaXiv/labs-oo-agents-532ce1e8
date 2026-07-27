@@ -21,9 +21,9 @@ this reproduction uses one public model and a smaller causal suite rather than
 the paper’s multi-model campaigns or SWE-bench, Terminal-Bench, and ARC.
 
 All formal evidence ran on OpenResearch **Kubernetes** using four **NVIDIA RTX
-PRO 6000 Blackwell** GPUs per job, **16 GPUs peak concurrently**, and **1.15
-hours actual elapsed wall time** from fresh recovery orientation through the
-last included run. Read the [tutorial-style report](reports/interface-reproduction/report.md),
+PRO 6000 Blackwell** GPUs per job and **16 GPUs peak concurrently**. The queue
+runner measured **0.988727 hours of Kubernetes campaign wall time** across 11
+successful runs with terminal logs. Read the [tutorial-style report](reports/interface-reproduction/report.md),
 explore the [self-contained marimo notebook](notebooks/nooa_interface_reproduction.py),
 or inspect the [frozen terminal-summary data](reports/interface-reproduction/results.json).
 

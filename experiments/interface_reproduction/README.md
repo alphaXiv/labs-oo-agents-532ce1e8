@@ -65,4 +65,4 @@ and [`results.json`](../../reports/interface-reproduction/results.json).
 
 All formal evidence used OpenResearch Kubernetes, four NVIDIA RTX PRO 6000
 Blackwell GPUs per job, and 16 GPUs peak concurrently. The recovery evidence
-window lasted 1.15 elapsed hours.
+campaign used 0.988727 hours of queue-observed Kubernetes wall time.

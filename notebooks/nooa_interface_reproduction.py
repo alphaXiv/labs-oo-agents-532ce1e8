@@ -242,8 +242,9 @@ def _(mo):
         baselines.
 
         All formal runs used OpenResearch **Kubernetes**, four **NVIDIA RTX PRO 6000
-        Blackwell** GPUs per job, and **16 GPUs peak concurrently**. The fresh evidence
-        window lasted **1.15 elapsed hours** (2026-07-27 00:55:19–02:04:28 UTC).
+        Blackwell** GPUs per job, and **16 GPUs peak concurrently**. The queue runner
+        measured **0.988727 hours of Kubernetes campaign wall time** across 11 successful
+        runs with terminal logs; formal rates use the nine complete summary records.
 
         Read the [paper](https://arxiv.org/abs/2607.20709), the
         [full report](https://github.com/alphaXiv/labs-oo-agents-532ce1e8/blob/main/reports/interface-reproduction/report.md),
