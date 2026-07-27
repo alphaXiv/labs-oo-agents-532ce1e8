@@ -2,7 +2,7 @@
   "harness": "nooa_no_validation",
   "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
   "served_model": "qwen-local",
-  "seeds": [1103, 2207, 3301, 4409, 5519, 6619],
+  "seeds": [7723, 8837, 9901],
   "temperature": 0.2,
   "top_p": 0.9,
   "max_turns": 6,
