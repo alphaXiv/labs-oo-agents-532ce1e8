@@ -11,7 +11,7 @@ spec:
       containers:
         - name: reproduction
           image: ghcr.io/astral-sh/uv:0.8.15-python3.12-bookworm-slim
-          command: ["bash", "-c", "$ORX_SCRIPT"]
+          command: ["bash", "-c", "eval \"$ORX_SCRIPT\""]
           env:
             - name: HF_HOME
               value: /model-cache
