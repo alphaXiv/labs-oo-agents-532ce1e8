@@ -648,6 +648,7 @@ def start_server() -> subprocess.Popen[str]:
         "16384",
         "--gpu-memory-utilization",
         "0.86",
+        "--enforce-eager",
         "--enable-auto-tool-choice",
         "--tool-call-parser",
         "hermes",
