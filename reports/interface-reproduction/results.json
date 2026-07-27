@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "paper_id": "2607.20709",
+  "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+  "sampling": {
+    "temperature": 0.2,
+    "top_p": 0.9,
+    "max_turns": 6,
+    "max_tokens_per_turn": 1200
+  },
+  "compute": {
+    "backend": "kubernetes",
+    "gpu_model": "NVIDIA RTX PRO 6000 Blackwell",
+    "peak_concurrent_gpu_count": 16
+  },
+  "conditions": {
+    "json": {
+      "label": "JSON tools",
+      "n": 60,
+      "successes": 48,
+      "model_calls": 240,
+      "tokens": 268495,
+      "trajectory_wall_s": 445.292,
+      "run_wall_s": 655.437,
+      "families": {
+        "state_mutation": [12, 12],
+        "reference_identity": [12, 12],
+        "typed_nested_output": [0, 12],
+        "error_recovery": [12, 12],
+        "multi_step_tools": [12, 12]
+      },
+      "failures": {
+        "contract_invalid": 12
+      }
+    },
+    "nooa": {
+      "label": "NOOA live",
+      "n": 60,
+      "successes": 25,
+      "model_calls": 143,
+      "tokens": 523223,
+      "trajectory_wall_s": 2220.827,
+      "run_wall_s": 2516.032,
+      "families": {
+        "state_mutation": [5, 12],
+        "reference_identity": [1, 12],
+        "typed_nested_output": [12, 12],
+        "error_recovery": [7, 12],
+        "multi_step_tools": [0, 12]
+      },
+      "failures": {
+        "wrong_checksum": 22,
+        "wrong_answer": 7,
+        "harness_exception": 5,
+        "identity_or_alias_effect_lost": 1
+      }
+    },
+    "nooa_serialized": {
+      "label": "NOOA copies",
+      "n": 45,
+      "successes": 19,
+      "model_calls": 111,
+      "tokens": 452106,
+      "trajectory_wall_s": 2122.246,
+      "run_wall_s": 2332.386,
+      "families": {
+        "state_mutation": [0, 9],
+        "reference_identity": [0, 9],
+        "typed_nested_output": [9, 9],
+        "error_recovery": [9, 9],
+        "multi_step_tools": [1, 9]
+      },
+      "failures": {
+        "state_not_mutated": 9,
+        "wrong_checksum": 8,
+        "harness_exception": 6,
+        "wrong_answer": 3
+      }
+    },
+    "nooa_no_validation": {
+      "label": "NOOA no validation",
+      "n": 30,
+      "successes": 0,
+      "model_calls": 60,
+      "tokens": 196008,
+      "trajectory_wall_s": 932.715,
+      "run_wall_s": 1127.86,
+      "families": {
+        "state_mutation": [0, 6],
+        "reference_identity": [0, 6],
+        "typed_nested_output": [0, 6],
+        "error_recovery": [0, 6],
+        "multi_step_tools": [0, 6]
+      },
+      "failures": {
+        "contract_invalid": 29,
+        "harness_exception": 1
+      }
+    }
+  },
+  "replications": {
+    "json": [
+      {"seeds": [1103, 2207, 3301, 4409, 5519, 6619], "successes": 24, "n": 30},
+      {"seeds": [7723, 8831, 9941, 11047, 12157, 13267], "successes": 24, "n": 30}
+    ],
+    "nooa": [
+      {"seeds": [1103, 2207, 3301, 4409, 5519, 6619], "successes": 12, "n": 30},
+      {"seeds": [7723, 8837, 9901], "successes": 5, "n": 15},
+      {"seeds": [10009, 11113, 12203], "successes": 8, "n": 15}
+    ],
+    "nooa_serialized": [
+      {"seeds": [1103, 2207, 3301, 4409, 5519, 6619], "successes": 12, "n": 30},
+      {"seeds": [7723, 8837, 9901], "successes": 7, "n": 15}
+    ],
+    "nooa_no_validation": [
+      {"seeds": [1103, 2207, 3301], "successes": 0, "n": 15},
+      {"seeds": [7723, 8837, 9901], "successes": 0, "n": 15}
+    ]
+  },
+  "evidence_run_ids": [
+    "c9618bc2-4211-467a-ad75-143472c3a616",
+    "cc3340e9-fb7c-42c8-8c7e-21837c03fff1",
+    "47939711-9acd-4472-aff1-bb412adab978",
+    "cb55ff7e-2749-4640-9ba1-00a54b655a41",
+    "63f5344d-d7cc-459b-99ac-8929fea67566",
+    "4b273409-57d6-4048-a030-52368bc8bc76",
+    "bb32402b-afe0-4262-a434-998aa32ee405",
+    "f6e4ddbd-f7e7-4af2-9226-0c222c10900e",
+    "8d2501a9-27cf-4032-81a9-12fb69e96627"
+  ]
+}

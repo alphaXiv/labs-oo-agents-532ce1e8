@@ -52,4 +52,17 @@ GPUs, runs the configured condition, and prints all evidence plus a compact
 
 ## Results summary
 
-Pending fresh Kubernetes runs created after 2026-07-27T00:54:41.419Z.
+Only complete Kubernetes runs created after 2026-07-27T00:54:41.419Z are
+counted. Aggregating independent seed batches, the JSON loop passed 48/60
+(80.0%), live NOOA passed 25/60 (41.7%), serialized-copy NOOA passed 19/45
+(42.2%), and NOOA without runtime return validation passed 0/30. Live NOOA was
+perfect on nested typed output (12/12), while JSON was 0/12. Over nine matched
+seeds, live objects passed state mutation 3/9 versus 0/9 for serialized copies;
+reference identity was 0/9 in both. The detailed synthesis, figures, limitations,
+and terminal evidence IDs are in
+[`reports/interface-reproduction/report.md`](../../reports/interface-reproduction/report.md)
+and [`results.json`](../../reports/interface-reproduction/results.json).
+
+All formal evidence used OpenResearch Kubernetes, four NVIDIA RTX PRO 6000
+Blackwell GPUs per job, and 16 GPUs peak concurrently. The recovery evidence
+window lasted 1.15 elapsed hours.
